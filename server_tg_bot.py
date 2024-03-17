@@ -200,15 +200,15 @@ def check_win_logs():
         msg_words = msg.split(' ')
         if ( msg_words[0] == "Thread" ):
             if ( msg_words[2] == "started." ):
-                # Запись о старте процесса
+                # Log about starting the process
                 if ( msg_words[1] in ended_threads ):
-                    # Завершенный тред
+                    # Ended thread
                     ended_threads.remove(msg_words[1])
                 else:
-                    # Активный тред
+                    # Active thread
                     active_threads.append(msg_words[1])
             elif ( msg_words[2] == "ended." ):
-                # Запись о завершении процесса
+                # Log about ending the process
                 ended_threads.append(msg_words[1])
     
     if ( len(active_threads) > 0 ):
