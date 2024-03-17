@@ -2,7 +2,7 @@
 Telegram bot for remote starting, stopping, restarting and monitoring specific services on Windows server
 
 Bot menu:
-open_log_dir - Get list of files from log directory
+open_log_dir - Get list of files from log directory\n
 check_threads - Check is there are active threads
 check_engine - Check if Engine service is running
 start_engine - Start Engine service
